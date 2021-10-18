@@ -1,0 +1,9 @@
+body {
+  color: white;
+  background-color: #260071;
+}
+
+@font-face {
+  font-family: RPS_font;
+  src: fonts/04B30.TTF;
+}
