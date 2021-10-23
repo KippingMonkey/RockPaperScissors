@@ -12,8 +12,14 @@
 </head>
 
 <body>
+  <div class="end-screen hidden">
+    <p class="header gameOver hidden">GAME OVER</p>
+    <p class="player-text hidden">TESTO<span class="prize hidden"> 🏆</span></p>
+    <br>
+    <button class="reset-btn hidden">Reset Game</button>
+  </div>
   <header>
-    <h1>Refresh page to play</h1>
+    <h1 class="header">Refresh page to play</h1>
   </header>
   <div class="grid-container">
       <p class="player-text p1">Player One</p>
@@ -23,7 +29,7 @@
       <p class="score">score</p>
       <img id="img-right" src="images/scissors.png" alt="illustration of handsymbol for scissors">
   
-      <button id="reset-btn">Reset Game</button>
+      <button class="reset-btn">Reset Game</button>
     <footer>
       <p>Made by Jonas Andersson 2021</p>
       <p>Based off of "The Dice Game" by the <a href="https://www.appbrewery.co/">App Brewery</a></p>
@@ -31,7 +37,6 @@
       <p></p>
     </footer>
   </div>
-
 </body>
 
 </html>
