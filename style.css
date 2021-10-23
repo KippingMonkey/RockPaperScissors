@@ -36,7 +36,7 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.6fr 1fr 0.5fr 1fr 0.6fr;
+  grid-template-columns: 0.6fr 1fr 0.55fr 1fr 0.6fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 2rem;
   justify-items: center;
