@@ -109,7 +109,7 @@ function checkForWinner(currentScore, player) {
       "Congratulations Player 2 You won the game!";
   }
 }
-
+//hides original game screen behind end screen
 function removeClassHidden() {
   let hiddenElements = document.querySelectorAll(".hidden");
   if (hiddenElements.length == 0) {
