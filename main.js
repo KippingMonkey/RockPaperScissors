@@ -7,11 +7,19 @@ let rand1 = Math.floor(Math.random() * 3);
 let rand2 = Math.floor(Math.random() * 3);
 let resetbtns = document.querySelectorAll(".reset-btn");
 let score = document.querySelector(".score");
+let howTobtn = document.getElementById("rules");
 
 // Check if the page has been loaded before by looking for data saved in sessionStorage
 if (sessionStorage.getItem("firstLoad")) {
-  showRandomImagesInGame();
-  playGame();
+  if (
+    sessionStorage.getItem("p1Score") == "11" ||
+    sessionStorage.getItem("p2Score") === "11"
+  ) {
+    removeClassHidden();
+  } else {
+    showRandomImagesInGame();
+    playGame();
+  }
 }
 //if it loading for the first time, save "firstLoad" in sessionStorage
 else {
@@ -19,8 +27,6 @@ else {
   sessionStorage.setItem("p1Score", 0);
   sessionStorage.setItem("p2Score", 0);
 }
-
-//Missing:Add "rules-btn" top right corner
 
 //resets page to first load when a resetbutton is clicked
 resetbtns.forEach((btn) => {
@@ -30,7 +36,12 @@ resetbtns.forEach((btn) => {
   });
 });
 
-//show an alert with the rules
+//show description of how and why to play the gam
+howTobtn.addEventListener("click", () => {
+  alert(
+    "ROCK PAPER SCISSORS\nThis is a classic game that is sometimes played for fun and other times to decide a dispute. Like deciding who will have to do the dishes.\nThis page gives you a chance to settle thing online.\n\nRock breaks Scissors, Scissors cuts Paper and Paper swallos Rock.\nEach round is decided by who has the strongest hand and here the winner is the one who first reaches 11 points.\n\n Each round is played by refreshing the page. Good Luck! "
+  );
+});
 
 //randomizes the pictures
 function showRandomImagesInGame() {
@@ -38,7 +49,9 @@ function showRandomImagesInGame() {
   let randImgRight = `images/${values[rand2]}.png`;
 
   img1.setAttribute("src", randImgLeft);
+  img1.setAttribute("alt", `Illustration of handsymbol for ${randImgLeft}`);
   img2.setAttribute("src", randImgRight);
+  img2.setAttribute("alt", `Illustration of handsymbol for ${randImgRight}`);
 }
 
 //decides winner per round
@@ -88,15 +101,22 @@ function updateScorePlayer2() {
 function checkForWinner(currentScore, player) {
   if (currentScore >= 11 && player === "player1") {
     removeClassHidden();
+    document.querySelector(".winner").textContent =
+      "Congratulations Player 1 You won the game!";
   } else if (currentScore >= 11 && player === "player2") {
     removeClassHidden();
+    document.querySelector(".winner").textContent =
+      "Congratulations Player 2 You won the game!";
   }
 }
 
 function removeClassHidden() {
   let hiddenElements = document.querySelectorAll(".hidden");
-  Array.from(hiddenElements).forEach((element) => {
-    element.classList.remove("hidden");
-    document.getElementById("")
-  });
+  if (hiddenElements.length == 0) {
+  } else {
+    Array.from(hiddenElements).forEach((element) => {
+      element.classList.remove("hidden");
+      document.getElementById("");
+    });
+  }
 }

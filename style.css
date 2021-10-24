@@ -26,6 +26,14 @@ body {
   background-color: var(--color-background);
 }
 
+#rules {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--ff-gameText);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
 .header {
   text-align: center;
   font-family: var(--ff-gameText);
@@ -46,10 +54,15 @@ body {
   z-index: 3;
 }
 .gameOver {
-  margin-top: 17%;
+  margin-top: 7%;
+}
+.winner {
+  text-align: center;
+  max-width: 50%;
+  line-height: 1.2;
 }
 .prize {
-  font-size: 3.5rem;
+  font-size: 7rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 .hidden {
@@ -70,6 +83,7 @@ body {
   font-family: var(--ff-gameText);
   font-size: 2.5rem;
   color: var(--color-text);
+  text-align: center;
 }
 .score {
   font-family: var(--ff-gameText);
@@ -77,6 +91,7 @@ body {
   color: var(--color-text);
   align-self: center;
 }
+
 .p1 {
   grid-column-start: 2;
   align-self: center;
@@ -89,11 +104,7 @@ body {
   grid-column-start: 2;
   align-self: end;
 }
-#score-btn {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--ff-gameText);
-}
+
 #img-right {
   grid-column-start: 4;
   align-self: end;
@@ -120,4 +131,75 @@ footer {
 a {
   text-decoration: underline;
   color: rgb(59, 153, 254);
+}
+@media (max-width: 1240px) {
+  .score {
+    font-size: 1.5rem;
+  }
+  .player-text {
+    font-size: 2rem;
+  }
+  .header {
+    font-size: 3rem;
+  }
+  .img {
+    width: 7rem;
+  }
+  .reset-btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .score {
+    font-size: 1.2rem;
+  }
+  .player-text {
+    font-size: 1.5rem;
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .img {
+    width: 5rem;
+  }
+  .reset-btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .score {
+    font-size: 0.8rem;
+  }
+  .player-text {
+    font-size: 1.5rem;
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .img {
+    width: 5rem;
+  }
+  .reset-btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .score {
+    font-size: 0.7rem;
+  }
+  .player-text {
+    font-size: 0.8rem;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .img {
+    width: 4rem;
+  }
+  .reset-btn {
+    font-size: 0.5rem;
+  }
+  footer {
+    font-size: x-small;
+  }
 }

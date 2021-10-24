@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A game of Rock Paper Scissors">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="font" href="fonts/04B30.TTF">
@@ -12,9 +13,11 @@
 </head>
 
 <body>
+  <button id="rules">How to Play</button>
   <div class="end-screen hidden">
     <p class="header gameOver hidden">GAME OVER</p>
-    <p class="player-text hidden">TESTO<span class="prize hidden"> 🏆</span></p>
+    <p class="player-text hidden winner">Reset to start over</p>
+    <p class="prize">🏆</p>
     <br>
     <button class="reset-btn hidden">Reset Game</button>
   </div>
@@ -25,9 +28,9 @@
       <p class="player-text p1">Player One</p>
       <p class="player-text p2">Player Two</p>
 
-      <img id="img-left" src="images/rock.png" alt="illustration of handsymbol for rock">
+      <img id="img-left" class="img" src="images/rock.png" alt="illustration of handsymbol for rock">
       <p class="score">score</p>
-      <img id="img-right" src="images/scissors.png" alt="illustration of handsymbol for scissors">
+      <img id="img-right" class="img" src="images/scissors.png" alt="illustration of handsymbol for scissors">
   
       <button class="reset-btn">Reset Game</button>
     <footer>
